@@ -53,12 +53,15 @@ anything.
 
 ## Registration tiers
 
-| Tier | Active while | Controller |
-|---|---|---|
-| 0 | The page is mounted | `pageController` |
-| 1 | At least one dataset is loaded | `dataController` |
-| 2 | At least one dataset is loaded | `dataController` |
-| 3 | The policy permits raw-row requests | `airlockController` |
+| Tier | Active while | Controller | Tools |
+|---|---|---|---|
+| 0 | The page is mounted | `pageController` | 4 |
+| 1 | At least one dataset is loaded | `dataController` | 5 |
+| 2 | At least one dataset is loaded | `dataController` | 6 |
+| 3 | The policy permits raw-row requests | `airlockController` | 1 |
+
+Sixteen in total. A fresh page advertises 4; loading a dataset takes it to 15; permitting
+raw requests takes it to 16.
 
 Tiers 1 and 2 share a controller because they share a lifetime; they are separated here
 because they differ in whether they mutate. Aborting a controller deregisters its whole
@@ -188,6 +191,24 @@ disproportionately improves how the agent behaves.
 
 Input: `{ sql: string }`
 
+### `propose_policy_change`
+`readOnlyHint: false`
+
+The agent may *suggest* that a column's classification is wrong — a column named
+`notes_internal` classified `free_text` that is actually a numeric code, say. The tool
+queues a suggestion in the policy editor with the agent's rationale. **It changes
+nothing.** The human approves or discards it.
+
+This is the privilege-escalation boundary, stated explicitly: an agent can ask for more
+access but can never grant itself more access. Loosening a policy is UI-only and has no
+tool at any tier, by design.
+
+It sits in tier 1 rather than tier 3 on purpose: the moment an agent most needs to argue
+that a classification is wrong is when the resulting restriction is blocking it, which is
+exactly when tier 3 is absent.
+
+`{ column, dataset_id, proposed_classification, rationale }`
+
 ---
 
 ## Tier 2 — workspace mutation
@@ -214,9 +235,10 @@ This is how the agent writes its conclusions into the shared document instead of
 chat log that nobody keeps.
 `{ title, body_markdown, severity: 'info'|'watch'|'material', evidence_block_ids: string[] }`
 
-### `update_block` / `remove_block` / `reorder_blocks`
-Ordinary editing, so the agent can revise its own work when the human pushes back.
-Every one of them is undoable from the audit log.
+### `update_block` / `remove_block`
+Ordinary editing, so the agent can revise its own work when the human pushes back. Both
+are undoable from the audit log. `update_block` carries an optional `position`, so
+reordering does not need a tool of its own.
 
 ### `export_report`
 Renders the notebook to self-contained markdown or HTML and triggers a download.
@@ -260,20 +282,6 @@ Behaviour:
 There is no timeout that defaults to allow. An unanswered dialog blocks the tool call
 indefinitely; if the tab is closed the promise never resolves, which is the correct
 failure direction.
-
-### `propose_policy_change`
-`readOnlyHint: false`
-
-The agent may *suggest* that a column's classification is wrong — a column named
-`notes_internal` classified `free_text` that is actually a numeric code, say. The tool
-queues a suggestion in the policy editor with the agent's rationale. **It changes
-nothing.** The human approves or discards it.
-
-This is the privilege-escalation boundary, stated explicitly: an agent can ask for more
-access but can never grant itself more access. Loosening a policy is UI-only and has no
-tool at any tier, by design.
-
-`{ column, dataset_id, proposed_classification, rationale }`
 
 ---
 

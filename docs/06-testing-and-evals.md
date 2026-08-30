@@ -56,7 +56,7 @@ Six flows, run against the production build.
    form of the judge's one-minute check and is worth writing precisely because the claim
    is the product.
 3. **Tier lifecycle.** With WebMCP stubbed, assert the registered tool set is 4 on a fresh
-   page, 14 after loading a dataset, 16 after enabling raw requests, and back to 14 after
+   page, 15 after loading a dataset, 16 after enabling raw requests, and back to 15 after
    disabling it. Assert that the disabled tool's `AbortSignal` fired.
 4. **Release flow.** Trigger a raw request, assert the dialog contents match the request,
    deny it, assert `denied_by_user` and a meter still reading 0. Repeat with an approval
