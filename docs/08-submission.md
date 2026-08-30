@@ -51,6 +51,86 @@ at the first two or three, so the order is the argument.
 | 5 | The same panel after revoking it, `request_raw_rows` gone | The `AbortSignal` capability boundary, legible without a caption. |
 | 6 | DevTools Network tab during a full session | Proof of the central claim. It has to be an image, not just a sentence. |
 
+## Additional info — the judges-only page
+
+Not shown on the public project page. Several fields are answerable before the build
+exists.
+
+| Field | Answer |
+|---|---|
+| Submitter Type | Individual |
+| Country of residence | **Open — must be checked against the excluded-territory list in the official rules, which keys off where OpenAI's API services are available. This affects eligibility, not just prize payment.** |
+| Organization name | Blank |
+| App Status | **New.** The project did not exist before Aug 25; the entire git history sits inside the submission window. |
+| If Existing, what did you update | Blank. Filling it while claiming New invites questions we do not need. |
+| Live URL | Pending deployment |
+| Public repo URL | Pending |
+| Level of learning / AI career value | Organiser telemetry, not judging input. Answer honestly. |
+
+### Testing instructions
+
+The FAQ says judges are not required to run the project, and that when they do, this is
+what they follow. It is written for someone with no context and sixty seconds.
+
+```
+No credentials required. The app is public, stores nothing, and has no backend.
+
+FASTEST PATH — 60 seconds, no setup
+1. Open the live URL in any browser.
+2. Click "Load sample payroll". A synthetic HR dataset loads into DuckDB inside the tab.
+3. Click "Run demo" in the agent panel. A scripted session drives the real tools against
+   the real engine: profiling, guarded SQL, a chart, one denied release request and one
+   approved one.
+4. Watch the airlock meter in the header. It reads 0 until you approve a release.
+
+WITH A REAL AGENT
+- ChatGPT in-app browser: WebMCP works with no flag and no token. Open the URL and ask
+  "Is there a gender pay gap in this data?"
+- Google Chrome 149+: enable chrome://flags/#enable-webmcp-testing, relaunch, open the
+  URL. The status pill in the header turns green and shows the registered tool count.
+
+WHAT TO LOOK FOR
+- Open DevTools > Network before loading the data. No request carries the dataset. The
+  only traffic is static assets and the DuckDB WebAssembly binaries. This is the claim
+  the whole project rests on and it takes ten seconds to verify.
+- Ask the agent for individual rows. run_query fails with `too_many_rows`. That is
+  structural: the tool cannot return a raw row, it is not a setting that was switched on.
+- Open the policy editor and turn off raw-row requests. `request_raw_rows` disappears
+  from the registered-tools panel. The tool is unregistered through its AbortSignal, not
+  merely refused, so the agent can no longer see that the capability exists.
+- The advertised tool count changes as you work: 4 on a fresh page, 15 once a dataset is
+  loaded, 16 while raw requests are permitted.
+
+Optional: Chrome's WebMCP Tool Inspector extension lists every registered tool with its
+description, schema and annotations, and lets you invoke them by hand.
+```
+
+### Which agents or clients did you test your WebMCP tools with
+
+Finalised on day 4 against what was actually exercised. Expected answer:
+
+```
+- ChatGPT's in-app browser (no flag, no origin-trial token required)
+- Google Chrome 152 stable with chrome://flags/#enable-webmcp-testing
+- Chrome's WebMCP Tool Inspector extension, for manual tool invocation and for reviewing
+  each tool's description and schema exactly as an agent receives them
+- The app's own in-page agent, which drives the identical tool registry through an
+  adapter to the OpenAI tool-calling shape — one definition, several consumers
+```
+
+### Which AI tools have you leveraged
+
+Answered plainly. The FAQ encourages AI assistance and separately warns against
+overstating what runs.
+
+```
+Cursor with Claude Opus 5 for the specification, scaffolding and implementation.
+OpenAI models drive the app's optional in-page agent and were used to run the tool
+evaluation suite — a fixed set of prompts checking whether a model that has never seen
+the app can complete the task from the tool descriptions alone. Several tool descriptions
+and error hints were rewritten based on where those runs failed.
+```
+
 ## Project Story — heading plan
 
 Devpost prefills seven headings. They are editable, and they do not cover the four points
