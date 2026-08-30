@@ -13,6 +13,66 @@ rather than composition.
 - [ ] Testing instructions for both browser paths
 - [ ] Built entirely within the submission period — the git history is the evidence
 
+## Devpost form fields
+
+**Project name.** `Airlock`
+
+**Elevator pitch** (200 character limit, 194 used):
+
+> An analytics workspace where the AI agent does the whole analysis without ever seeing
+> your data. It stays in DuckDB in your tab; WebMCP tools return only aggregates. Raw rows
+> need your approval.
+
+**Thumbnail.** 3:2, under 5 MB. A screenshot of the release dialog with the airlock meter
+visible — one image that carries the whole idea. Captured on day 3 once the UI exists.
+
+## Project Story — heading plan
+
+Devpost prefills seven headings. They are editable, and they do not cover the four points
+the rules require: the fit for WebMCP, the UX improvement, what is newly possible, and the
+implementation. Two of those have nowhere to live in the default template.
+
+The plan is to keep Devpost's headings — the gallery renders against them and a judge
+scanning a hundred entries looks for familiar anchors — and insert two of our own where
+the required content belongs.
+
+| Heading | Source | Required point |
+|---|---|---|
+| Inspiration | The problem, from `01-product.md` | — |
+| What it does | Elevator + the three collaboration beats | 2, 3 |
+| **Why WebMCP is the only way to build this** *(added)* | "Why this use case is a strong fit" below | **1** |
+| How we built it | "How WebMCP was implemented" below, plus the stack | **4** |
+| **Privacy model, honestly** *(added)* | The claimed/not-claimed pair from `04-privacy-model.md` | — |
+| Challenges we ran into | **Written on day 4 from what actually happened** | — |
+| Accomplishments that we're proud of | The zero-counter run and capability withdrawal | — |
+| What we learned | **Written on day 4** | — |
+| What's next for Airlock | Roadmap below | — |
+
+The two added headings sit where they do on purpose. "Why WebMCP" comes straight after
+"What it does", because a reader who has just understood the product is at the exact
+moment where the question forms. "Privacy model, honestly" comes after the implementation,
+because stating the limits carries more weight once the reader has seen that the thing
+works.
+
+`Challenges` and `What we learned` are deliberately left empty until the build is done.
+Inventing them now would produce the generic filler the challenge FAQ specifically warns
+against, and the real ones will be better: no portable `unregisterTool`, `DOMException`
+on duplicate tool names under Strict Mode, DuckDB-Wasm inside a static export, and the
+gap between a tool that works and a tool description a model can actually act on.
+
+### Drafts for the sections that are writable now
+
+`Accomplishments`: a full gender pay-gap review completed with the disclosure counter
+reading zero; a permission model built out of tool lifetime rather than tool logic, so a
+revoked capability disappears from `getTools()` instead of merely refusing; one tool
+registry serving three consumers with no duplicated handler.
+
+`What's next`: server-side release logging for organisations that need the audit trail to
+outlive the tab; OPFS persistence so a session survives a reload; the threaded `coi`
+DuckDB bundle behind cross-origin isolation for larger files; a shared policy file a
+compliance team can author once and distribute; and query-budget accounting to blunt the
+reconstruction attack the privacy model openly does not defend against today.
+
 ## Written description
 
 ### Elevator
