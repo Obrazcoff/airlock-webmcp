@@ -26,6 +26,31 @@ rather than composition.
 **Thumbnail.** 3:2, under 5 MB. A screenshot of the release dialog with the airlock meter
 visible — one image that carries the whole idea. Captured on day 3 once the UI exists.
 
+**Built with** (25 tag limit, 17 used). Order matters: the first tags render in the gallery
+card. `webmcp` leads because it is the challenge's own keyword and the likely filter.
+
+```
+webmcp, model-context-protocol, duckdb, webassembly, typescript, next.js, react,
+zustand, zod, observable-plot, tailwind-css, web-workers, sql, vercel, openai,
+privacy, data-analytics
+```
+
+**Try it out links.** Two: the production URL and the public repository.
+
+**Video demo link.** YouTube, public, under 3:00, with audio. Day 4.
+
+**Image gallery** (15 allowed, 6 planned, 3:2, captured at 1080p or better). A judge looks
+at the first two or three, so the order is the argument.
+
+| # | Shot | Why it earns its place |
+|---|---|---|
+| 1 | The release dialog, meter visible | Also the thumbnail. One image carries the whole idea. |
+| 2 | Full three-pane workspace mid-session, chart materialising | Shows a product rather than a demo. |
+| 3 | Audit panel with tool-call cards | The read-only badges and the redaction and suppression lines show the privacy engine working. |
+| 4 | Registered-tools panel, raw access permitted | Pairs with 5. |
+| 5 | The same panel after revoking it, `request_raw_rows` gone | The `AbortSignal` capability boundary, legible without a caption. |
+| 6 | DevTools Network tab during a full session | Proof of the central claim. It has to be an image, not just a sentence. |
+
 ## Project Story — heading plan
 
 Devpost prefills seven headings. They are editable, and they do not cover the four points
