@@ -1,0 +1,45 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# build output
+.next/
+out/
+dist/
+build/
+
+# runtime
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+
+# env
+.env
+.env.local
+.env.*.local
+
+# deployment
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# test / coverage
+coverage/
+playwright-report/
+test-results/
+.playwright/
+
+# editors
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# DuckDB-Wasm bundles are vendored into public/duckdb by scripts/vendor-duckdb.mjs.
+# They are large binaries; the script is the source of truth, not the artifacts.
+public/duckdb/
