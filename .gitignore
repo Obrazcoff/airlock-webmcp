@@ -34,6 +34,7 @@ coverage/
 playwright-report/
 test-results/
 .playwright/
+.playwright-mcp/
 
 # editors
 .idea/
