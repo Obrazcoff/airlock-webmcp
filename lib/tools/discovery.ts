@@ -28,7 +28,7 @@ const getWorkspaceState: AirlockTool<Record<string, never>> = {
   readOnly: true,
   async execute() {
     const { datasets: loaded } = datasets();
-    const { rawRequestsEnabled, kAnonymityThreshold, cellsReleased } = policy();
+    const { rawRequestsEnabled, kAnonymityThreshold, maxPreviewRows, cellsReleased } = policy();
 
     return ok(
       loaded.length === 0
@@ -44,6 +44,7 @@ const getWorkspaceState: AirlockTool<Record<string, never>> = {
         policy: {
           raw_row_requests_enabled: rawRequestsEnabled,
           k_anonymity_threshold: kAnonymityThreshold,
+          max_preview_rows: maxPreviewRows,
         },
         cells_released: cellsReleased,
       },
@@ -130,8 +131,30 @@ const loadSampleDataset: AirlockTool<z.infer<typeof LoadSampleInput>> = {
   },
 };
 
+const getActiveSelection: AnyAirlockTool = {
+  tier: 0,
+  name: "get_active_selection",
+  description:
+    "Return what the human is looking at right now: focused dataset, selected chart, " +
+    "highlighted series, active filter, or selected notebook text. Call this when the " +
+    "user points at something on screen ('why these?', 'explain this bar'). Read-only.",
+  input: Empty,
+  readOnly: true,
+  async execute() {
+    return ok("Nothing is selected in the UI yet.", {
+      empty: true,
+      dataset_id: null,
+      block_id: null,
+      series: null,
+      filter_sql: null,
+      selected_text: null,
+    });
+  },
+};
+
 export const DISCOVERY_TOOLS: AnyAirlockTool[] = [
   getWorkspaceState,
   listDatasets,
+  getActiveSelection,
   loadSampleDataset,
 ];

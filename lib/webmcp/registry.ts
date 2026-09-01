@@ -1,4 +1,5 @@
 import { DISCOVERY_TOOLS } from "@/lib/tools/discovery";
+import { INSPECTION_TOOLS } from "@/lib/tools/inspection";
 import type { AnyAirlockTool, Tier } from "@/lib/webmcp/types";
 
 /**
@@ -8,7 +9,10 @@ import type { AnyAirlockTool, Tier } from "@/lib/webmcp/types";
  * WebMCP, the optional in-page agent, and the scripted demo. Adding a tool here gives it
  * to all three with no second implementation to keep in sync.
  */
-export const AIRLOCK_TOOLS: AnyAirlockTool[] = [...DISCOVERY_TOOLS];
+export const AIRLOCK_TOOLS: AnyAirlockTool[] = [
+  ...DISCOVERY_TOOLS,
+  ...INSPECTION_TOOLS,
+];
 
 export function toolsForTiers(active: Set<Tier>): AnyAirlockTool[] {
   return AIRLOCK_TOOLS.filter((tool) => active.has(tool.tier));

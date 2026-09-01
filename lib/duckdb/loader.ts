@@ -1,7 +1,8 @@
+import { classifyDatasetColumns } from "@/lib/duckdb/profile";
 import { getDuckDB } from "@/lib/duckdb/client";
 import type { Dataset, DatasetColumn } from "@/lib/store/datasets";
 
-async function describe(table: string): Promise<DatasetColumn[]> {
+async function describe(table: string): Promise<Pick<DatasetColumn, "name" | "sqlType">[]> {
   const db = await getDuckDB();
   const conn = await db.connect();
   try {
@@ -67,12 +68,16 @@ export async function loadCsvFromUrl(
     await conn.close();
   }
 
+  const rowCount = await countRows(table);
+  const rawColumns = await describe(table);
+  const columns = await classifyDatasetColumns(table, rawColumns, rowCount);
+
   return {
     id: table,
     name: displayName,
     source: url.split("/").pop() ?? url,
-    rowCount: await countRows(table),
-    columns: await describe(table),
+    rowCount,
+    columns,
     loadedAt: new Date().toISOString(),
   };
 }

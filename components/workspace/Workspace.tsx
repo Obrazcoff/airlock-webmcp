@@ -5,9 +5,10 @@ import { useMemo } from "react";
 import { WebMcpStatusPill } from "@/components/system/WebMcpStatusPill";
 import { AIRLOCK_TOOLS } from "@/lib/webmcp/registry";
 import { useWebMcpTools } from "@/lib/webmcp/useWebMcpTools";
-import { TIER_LABELS, type Tier } from "@/lib/webmcp/types";
+import { CLASSIFICATION_LABELS } from "@/lib/privacy/types";
 import { useDatasetStore } from "@/lib/store/datasets";
 import { usePolicyStore } from "@/lib/store/policy";
+import { TIER_LABELS, type Tier } from "@/lib/webmcp/types";
 
 export function Workspace() {
   const { datasets, loading, error } = useDatasetStore();
@@ -86,7 +87,7 @@ export function Workspace() {
                     <span
                       key={column.name}
                       className="rounded border border-neutral-800 bg-neutral-950 px-1.5 py-0.5 font-mono text-xs text-neutral-400"
-                      title={column.sqlType}
+                      title={`${column.sqlType} · ${CLASSIFICATION_LABELS[column.classification]}`}
                     >
                       {column.name}
                     </span>
