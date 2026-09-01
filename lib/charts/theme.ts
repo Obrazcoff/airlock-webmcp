@@ -1,8 +1,8 @@
 /** Dark-theme palette for Observable Plot. */
 
 export const GENDER_COLORS = {
-  Female: "#22d3ee", // cyan-400 — cool
-  Male: "#fbbf24", // amber-400 — warm, matches airlock accent family
+  Female: "#fb7185", // rose-400
+  Male: "#34d399", // emerald-400 — matches site accent
 } as const;
 
 const DARK_CATEGORICAL = [
