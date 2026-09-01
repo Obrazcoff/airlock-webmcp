@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { createPortal } from "react-dom";
 
 import { countCells } from "@/lib/airlock/rawRequest";
 import { useReleaseStore, type PendingRelease } from "@/lib/store/release";
@@ -52,7 +53,7 @@ function ReleaseRequestDialogInner({ pending }: { pending: PendingRelease }) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-end justify-center bg-black/70 p-4 sm:items-center"
+      className="fixed inset-0 z-[200] flex items-end justify-center bg-black/70 p-4 sm:items-center"
       role="dialog"
       aria-modal="true"
       aria-labelledby="release-dialog-title"
@@ -181,6 +182,9 @@ function ReleaseRequestDialogInner({ pending }: { pending: PendingRelease }) {
 
 export function ReleaseRequestDialog() {
   const pending = useReleaseStore((state) => state.pending);
-  if (!pending) return null;
-  return <ReleaseRequestDialogInner key={pending.id} pending={pending} />;
+  if (!pending || typeof document === "undefined") return null;
+  return createPortal(
+    <ReleaseRequestDialogInner key={pending.id} pending={pending} />,
+    document.body,
+  );
 }

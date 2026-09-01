@@ -145,8 +145,28 @@ export async function runRawRowPreview(
 
   const conn = await connect();
   try {
-    const limitedSql = `${sql.replace(/;\s*$/, "")} LIMIT ${rowLimit + 1}`;
-    const result = await conn.query(limitedSql);
+    const normalized = sql.replace(/;\s*$/, "");
+
+    const countResult = await conn.query(
+      `SELECT count(*) AS n FROM (${normalized}) AS _airlock_count`,
+    );
+    const total = Number(
+      (countResult.toArray()[0]?.toJSON() as { n?: bigint | number } | undefined)?.n ?? 0,
+    );
+
+    if (total > rowLimit) {
+      return fail(
+        "too_many_rows",
+        `Query matches ${total} rows, but row_limit is ${rowLimit}.`,
+        "Add WHERE filters or LIMIT to the SQL so it resolves to fewer rows.",
+      );
+    }
+
+    const previewSql = /\bLIMIT\s+\d+\s*$/i.test(normalized)
+      ? normalized
+      : `${normalized} LIMIT ${rowLimit}`;
+
+    const result = await conn.query(previewSql);
     const columns = result.schema.fields.map((field) => field.name);
 
     const match = columnsMatchResult(expectedColumns, columns);
@@ -159,7 +179,7 @@ export async function runRawRowPreview(
     if (rawRows.length > rowLimit) {
       return fail(
         "too_many_rows",
-        `The query matched ${rawRows.length} rows, but row_limit is ${rowLimit}.`,
+        `The query returned ${rawRows.length} rows, but row_limit is ${rowLimit}.`,
         "Add filters or lower row_limit.",
       );
     }

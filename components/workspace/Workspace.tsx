@@ -13,6 +13,7 @@ import { useAuditStore } from "@/lib/store/audit";
 import { useDatasetStore } from "@/lib/store/datasets";
 import { useNotebookStore } from "@/lib/store/notebook";
 import { usePolicyStore } from "@/lib/store/policy";
+import { useReleaseStore } from "@/lib/store/release";
 import { AIRLOCK_TOOLS } from "@/lib/webmcp/registry";
 import { useWebMcpTools } from "@/lib/webmcp/useWebMcpTools";
 import { CLASSIFICATION_LABELS } from "@/lib/privacy/types";
@@ -23,9 +24,12 @@ export function Workspace() {
   const blocks = useNotebookStore((state) => state.blocks);
   const auditEntries = useAuditStore((state) => state.entries);
   const { cellsReleased, rawRequestsEnabled } = usePolicyStore();
+  const releasePending = useReleaseStore((state) => state.pending);
 
   const [demoRunning, setDemoRunning] = useState(false);
   const [demoProgress, setDemoProgress] = useState<DemoProgress | null>(null);
+  const [airlockBusy, setAirlockBusy] = useState(false);
+  const [airlockMessage, setAirlockMessage] = useState<string | null>(null);
 
   const activeTiers = useMemo(() => {
     const tiers = new Set<Tier>([0]);
@@ -50,21 +54,33 @@ export function Workspace() {
   };
 
   const tryAirlock = async () => {
-    if (datasets.length === 0) {
-      await invokeTool("load_sample_dataset", { id: "payroll_2026" });
+    setAirlockMessage(null);
+    setAirlockBusy(true);
+    try {
+      if (datasets.length === 0) {
+        const loaded = await invokeTool("load_sample_dataset", { id: "payroll_2026" });
+        if (!loaded.ok) {
+          setAirlockMessage(loaded.message);
+          return;
+        }
+      }
+      const result = await invokeTool("request_raw_rows", {
+        sql: "SELECT employee_id, gender, grade, base_salary FROM payroll WHERE base_salary > 120000 ORDER BY base_salary DESC LIMIT 5",
+        row_limit: 5,
+        columns: ["employee_id", "gender", "grade", "base_salary"],
+        justification:
+          "Need to inspect the top five salary outliers individually to explain the grade-controlled gap in the notebook.",
+      });
+      if (!result.ok) {
+        setAirlockMessage(result.message);
+      }
+    } finally {
+      setAirlockBusy(false);
     }
-    await invokeTool("request_raw_rows", {
-      sql: "SELECT employee_id, gender, grade, base_salary FROM payroll WHERE base_salary > 120000 ORDER BY base_salary DESC",
-      row_limit: 5,
-      columns: ["employee_id", "gender", "grade", "base_salary"],
-      justification:
-        "Need to inspect the top five salary outliers individually to explain the grade-controlled gap in the notebook.",
-    });
   };
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      <ReleaseRequestDialog />
       {/* Hero — the story, not the stack */}
       <header className="mb-8 rounded-2xl border border-emerald-500/20 bg-gradient-to-br from-emerald-500/10 via-neutral-900/80 to-neutral-900/40 p-6 sm:p-8">
         <div className="flex flex-wrap items-start justify-between gap-4">
@@ -115,7 +131,7 @@ export function Workspace() {
           <button
             type="button"
             onClick={tryAirlock}
-            disabled={demoRunning || !rawRequestsEnabled}
+            disabled={demoRunning || !rawRequestsEnabled || airlockBusy || releasePending !== null}
             className="rounded-lg border border-amber-500/40 bg-amber-500/10 px-4 py-2.5 text-sm text-amber-100 hover:bg-amber-500/20 disabled:opacity-50"
             title={
               rawRequestsEnabled
@@ -123,9 +139,26 @@ export function Workspace() {
                 : "Enable raw requests in the policy panel first"
             }
           >
-            Try the airlock
+            {airlockBusy
+              ? "Preparing request…"
+              : releasePending
+                ? "Waiting for your decision…"
+                : "Try the airlock"}
           </button>
         </div>
+
+        {releasePending && !airlockBusy && (
+          <p className="mt-3 rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-2 text-sm text-amber-100">
+            Release dialog is open — scroll up if you don&apos;t see it. Choose Release or
+            Deny to continue.
+          </p>
+        )}
+
+        {airlockMessage && (
+          <p className="mt-3 rounded-lg border border-rose-500/30 bg-rose-500/10 px-4 py-2 text-sm text-rose-200">
+            {airlockMessage}
+          </p>
+        )}
 
         {demoProgress && (
           <div className="demo-fade-in mt-4 rounded-lg border border-neutral-800 bg-neutral-950/60 px-4 py-3">
@@ -244,6 +277,7 @@ export function Workspace() {
           </section>
         </aside>
       </div>
+      <ReleaseRequestDialog />
     </div>
   );
 }
