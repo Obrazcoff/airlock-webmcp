@@ -44,3 +44,7 @@ test-results/
 # DuckDB-Wasm bundles are vendored into public/duckdb by scripts/vendor-duckdb.mjs.
 # They are large binaries; the script is the source of truth, not the artifacts.
 public/duckdb/
+
+# Local-only working docs (Russian, Cursor rules). Files stay on disk, not in git.
+notes-ru/
+AGENTS.md
