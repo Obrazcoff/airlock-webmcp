@@ -28,8 +28,12 @@ export interface FindingBlockData {
 export interface TableBlockData {
   type: "table";
   title: string;
+  sql?: string;
+  justification?: string;
   columns: string[];
   rows: Record<string, unknown>[];
+  cells_released?: number;
+  mode?: "full" | "redacted";
 }
 
 export type BlockPayload = ChartBlockData | FindingBlockData | TableBlockData;

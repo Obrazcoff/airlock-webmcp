@@ -200,12 +200,7 @@ for (let i = 0; i < ROWS; i += 1) {
 
   const genderRoll = rand();
   const femaleShare = GENDER_BY_GRADE[grade];
-  const gender =
-    genderRoll < femaleShare
-      ? "Female"
-      : genderRoll < femaleShare + 0.008
-        ? "Non-binary"
-        : "Male";
+  const gender = genderRoll < femaleShare ? "Female" : "Male";
 
   const tenureYears = Math.round(Math.min(14, Math.abs(gaussian()) * 3.4) * 10) / 10;
   const hireYear = 2026 - Math.floor(tenureYears);

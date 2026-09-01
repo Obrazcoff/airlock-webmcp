@@ -2,6 +2,7 @@
 
 import type { FindingBlockData, NotebookBlock } from "@/lib/store/notebook";
 import { ChartBlockView } from "@/components/notebook/ChartBlockView";
+import { TableBlockView } from "@/components/notebook/TableBlockView";
 
 const severityStyles = {
   info: "border-sky-500/30 bg-sky-500/5 text-sky-200",
@@ -59,6 +60,8 @@ export function NotebookPanel({ blocks }: { blocks: NotebookBlock[] }) {
           )}
 
           {block.payload.type === "finding" && <FindingView finding={block.payload} />}
+
+          {block.payload.type === "table" && <TableBlockView table={block.payload} />}
         </article>
       ))}
     </div>

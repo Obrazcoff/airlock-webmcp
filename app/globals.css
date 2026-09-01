@@ -27,3 +27,15 @@ body {
 .demo-fade-in {
   animation: fade-up 0.45s ease-out both;
 }
+
+/* Observable Plot: tip box defaults to white even on dark pages */
+[class^="plot-"],
+.plot {
+  --plot-background: #262626;
+  --plot-foreground: #f5f5f5;
+}
+
+g[aria-label="tip"] {
+  --plot-background: #262626;
+  --plot-foreground: #f5f5f5;
+}

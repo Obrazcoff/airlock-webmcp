@@ -3,7 +3,9 @@
 import { useMemo, useState } from "react";
 
 import { ToolLogPanel } from "@/components/audit/ToolLogPanel";
+import { ReleaseRequestDialog } from "@/components/airlock/ReleaseRequestDialog";
 import { NotebookPanel } from "@/components/notebook/NotebookPanel";
+import { PolicyPanel } from "@/components/policy/PolicyPanel";
 import { WebMcpStatusPill } from "@/components/system/WebMcpStatusPill";
 import { DEMO_STEPS, runPayGapDemo, type DemoProgress } from "@/lib/demo/payGapStory";
 import { invokeTool } from "@/lib/tools/invoke";
@@ -17,7 +19,7 @@ import { CLASSIFICATION_LABELS } from "@/lib/privacy/types";
 import type { Tier } from "@/lib/webmcp/types";
 
 export function Workspace() {
-  const { datasets, loading, error } = useDatasetStore();
+  const { datasets, error } = useDatasetStore();
   const blocks = useNotebookStore((state) => state.blocks);
   const auditEntries = useAuditStore((state) => state.entries);
   const { cellsReleased, rawRequestsEnabled } = usePolicyStore();
@@ -47,10 +49,22 @@ export function Workspace() {
     }
   };
 
-  const loadSample = () => invokeTool("load_sample_dataset", { id: "payroll_2026" });
+  const tryAirlock = async () => {
+    if (datasets.length === 0) {
+      await invokeTool("load_sample_dataset", { id: "payroll_2026" });
+    }
+    await invokeTool("request_raw_rows", {
+      sql: "SELECT employee_id, gender, grade, base_salary FROM payroll WHERE base_salary > 120000 ORDER BY base_salary DESC",
+      row_limit: 5,
+      columns: ["employee_id", "gender", "grade", "base_salary"],
+      justification:
+        "Need to inspect the top five salary outliers individually to explain the grade-controlled gap in the notebook.",
+    });
+  };
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <ReleaseRequestDialog />
       {/* Hero — the story, not the stack */}
       <header className="mb-8 rounded-2xl border border-emerald-500/20 bg-gradient-to-br from-emerald-500/10 via-neutral-900/80 to-neutral-900/40 p-6 sm:p-8">
         <div className="flex flex-wrap items-start justify-between gap-4">
@@ -100,11 +114,16 @@ export function Workspace() {
           </button>
           <button
             type="button"
-            onClick={loadSample}
-            disabled={loading !== null || demoRunning}
-            className="rounded-lg border border-neutral-700 bg-neutral-900 px-4 py-2.5 text-sm text-neutral-200 hover:bg-neutral-800 disabled:opacity-50"
+            onClick={tryAirlock}
+            disabled={demoRunning || !rawRequestsEnabled}
+            className="rounded-lg border border-amber-500/40 bg-amber-500/10 px-4 py-2.5 text-sm text-amber-100 hover:bg-amber-500/20 disabled:opacity-50"
+            title={
+              rawRequestsEnabled
+                ? "Opens the release dialog — approve or deny"
+                : "Enable raw requests in the policy panel first"
+            }
           >
-            {loading ? "Loading…" : "Load sample only"}
+            Try the airlock
           </button>
         </div>
 
@@ -145,7 +164,7 @@ export function Workspace() {
             <h2 className="text-sm font-medium text-neutral-300">Datasets</h2>
             {datasets.length === 0 ? (
               <p className="mt-2 text-sm text-neutral-500">
-                Run the story or load the sample payroll export.
+                Run the story or try the airlock to load payroll.
               </p>
             ) : (
               <ul className="mt-3 space-y-3">
@@ -177,6 +196,8 @@ export function Workspace() {
             )}
             {error && <p className="mt-2 text-sm text-red-400">{error}</p>}
           </section>
+
+          <PolicyPanel />
 
           <section className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-4">
             <h2 className="text-sm font-medium text-neutral-300">Tools live</h2>

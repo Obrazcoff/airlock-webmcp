@@ -1,4 +1,5 @@
 import { isAggregateQuery } from "@/lib/duckdb/aggregateGuard";
+import { columnsMatchResult, rejectsSelectStar } from "@/lib/airlock/rawRequest";
 import { connect } from "@/lib/duckdb/client";
 import { checkSql } from "@/lib/duckdb/sqlGuard";
 import { sanitizeRows } from "@/lib/privacy/injectionGuard";
@@ -104,6 +105,70 @@ export async function runGuardedQuery(
         injection_flags,
       },
     );
+  } catch (error) {
+    return fail(
+      "engine_error",
+      error instanceof Error ? error.message : String(error),
+    );
+  } finally {
+    await conn.close();
+  }
+}
+
+/** Preview rows for the airlock dialog — no aggregate guard, explicit columns only. */
+export async function runRawRowPreview(
+  sql: string,
+  rowLimit: number,
+  expectedColumns: string[],
+): Promise<ToolResult> {
+  const guard = checkSql(sql);
+  if (!guard.allowed) {
+    return fail("query_rejected", guard.reason, guard.hint);
+  }
+
+  if (rejectsSelectStar(sql)) {
+    return fail(
+      "query_rejected",
+      "SELECT * is not permitted for raw row requests.",
+      "List every column explicitly in both the SQL and the columns argument.",
+    );
+  }
+
+  if (rowLimit < 1 || rowLimit > 50) {
+    return fail("invalid_input", "row_limit must be between 1 and 50.");
+  }
+
+  const columnCheck = columnsMatchResult(expectedColumns, expectedColumns);
+  if (!columnCheck.ok) {
+    return fail("invalid_input", columnCheck.message);
+  }
+
+  const conn = await connect();
+  try {
+    const limitedSql = `${sql.replace(/;\s*$/, "")} LIMIT ${rowLimit + 1}`;
+    const result = await conn.query(limitedSql);
+    const columns = result.schema.fields.map((field) => field.name);
+
+    const match = columnsMatchResult(expectedColumns, columns);
+    if (!match.ok) {
+      return fail("invalid_input", match.message);
+    }
+
+    const rawRows = result.toArray().map((row) => arrowRowToRecord(row, columns));
+
+    if (rawRows.length > rowLimit) {
+      return fail(
+        "too_many_rows",
+        `The query matched ${rawRows.length} rows, but row_limit is ${rowLimit}.`,
+        "Add filters or lower row_limit.",
+      );
+    }
+
+    return ok(`${rawRows.length} row(s) ready for human review.`, {
+      columns,
+      rows: rawRows,
+      row_count: rawRows.length,
+    });
   } catch (error) {
     return fail(
       "engine_error",

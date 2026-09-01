@@ -56,6 +56,11 @@ export function ChartBlockView({ chart }: { chart: ChartBlockData }) {
       color: chart.color ? { legend: true } : undefined,
       x: { label: chart.x },
       y: { label: chart.y, grid: true },
+      style: {
+        background: "transparent",
+        color: "#f5f5f5",
+        fontSize: "12px",
+      },
       marks,
     });
 

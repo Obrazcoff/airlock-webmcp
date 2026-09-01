@@ -26,7 +26,7 @@ E-01023,Engineering,Technical,L7,Male,35-44,Berlin,E-01071,2.8,166100,8.3,Exceed
 E-01024,Sales,Commercial,L4,Male,35-44,Remote (EU),E-01026,0.8,75600,8.7,Meets,2026-05-28,,
 E-01025,Finance,Corporate,L1,Female,35-44,Lisbon,E-01015,2.9,30700,4,Exceeds,2024-07-14,,Completed the internal leadership programme.
 E-01026,Engineering,Technical,L1,Female,35-44,Berlin,E-01117,5,41600,4,Exceeds,2021-04-18,,
-E-01027,Engineering,Technical,L6,Non-binary,35-44,Berlin,E-01119,2.8,127200,6.8,Exceeds,2024-03-14,,On parental leave for part of 2024.
+E-01027,Engineering,Technical,L6,Male,35-44,Berlin,E-01119,2.8,127200,6.8,Exceeds,2024-03-14,,On parental leave for part of 2024.
 E-01028,Finance,Corporate,L3,Male,25-34,Berlin,E-01068,0.5,63100,14.6,Meets,2026-09-11,,Grade corrected during the 2023 levelling exercise.
 E-01029,Data,Technical,L2,Male,25-34,Berlin,E-01012,4.7,45600,13,Meets,2022-12-02,,
 E-01030,Engineering,Technical,L6,Male,25-34,Berlin,E-01081,2.2,124200,10.9,Meets,2024-08-03,,Completed the internal leadership programme.
@@ -209,7 +209,7 @@ E-01206,People,Corporate,L6,Male,25-34,Berlin,E-01095,2.3,127800,7.9,Exceeds,202
 E-01207,Support,Operations,L5,Male,35-44,Remote (EU),E-01044,3,84700,9.4,Exceeds,2023-02-16,,Grade corrected during the 2019 levelling exercise.
 E-01208,Support,Operations,L3,Male,45-54,Remote (EU),E-01097,1.5,59500,8.8,Meets,2025-02-05,,Completed the internal leadership programme.
 E-01209,People,Corporate,L3,Male,18-24,Lisbon,E-01038,2.5,47700,6.1,Exceeds,2024-07-04,,
-E-01210,Engineering,Technical,L2,Non-binary,25-34,Berlin,E-01053,0.8,48300,14.4,Exceeds,2026-01-05,,Grade corrected during the 2023 levelling exercise.
+E-01210,Engineering,Technical,L2,Male,25-34,Berlin,E-01053,0.8,48300,14.4,Exceeds,2026-01-05,,Grade corrected during the 2023 levelling exercise.
 E-01211,Engineering,Technical,L1,Female,45-54,Berlin,E-01041,2.7,39900,7.3,Meets,2024-02-21,,
 E-01212,Engineering,Technical,L6,Male,25-34,Lisbon,E-01039,1.8,101000,4.3,Exceeds,2025-11-27,,Joined through the Legal acquisition.
 E-01213,Support,Operations,L7,Male,45-54,Lisbon,E-01068,1,121500,5.3,Meets,2025-07-11,,On parental leave for part of 2025.
@@ -264,14 +264,14 @@ E-01261,Marketing,Commercial,L5,Female,45-54,Remote (EU),E-01039,3.6,83700,10.9,
 E-01262,Engineering,Technical,L4,Male,35-44,Podgorica,E-01046,3.3,51900,8.3,Outstanding,2023-02-03,,Completed the internal leadership programme.
 E-01263,Marketing,Commercial,L4,Male,35-44,Podgorica,E-01000,7.5,51600,12.1,Meets,2019-10-02,,
 E-01264,Support,Operations,L5,Male,25-34,Remote (EU),E-01009,3.2,86700,8.7,Exceeds,2023-12-07,,Grade corrected during the 2019 levelling exercise.
-E-01265,Sales,Commercial,L4,Non-binary,25-34,Lisbon,E-01045,1.7,56300,13.7,Meets,2025-12-27,,Completed the internal leadership programme.
+E-01265,Sales,Commercial,L4,Male,25-34,Lisbon,E-01045,1.7,56300,13.7,Meets,2025-12-27,,Completed the internal leadership programme.
 E-01266,Sales,Commercial,L3,Female,25-34,Berlin,E-01027,2.8,60600,11.5,Meets,2024-04-10,,Joined through the People acquisition.
 E-01267,People,Corporate,L3,Female,55-64,Berlin,E-01033,1.6,56700,14.7,Meets,2025-11-21,,
 E-01268,Sales,Commercial,L1,Male,35-44,Berlin,E-01021,3.7,45800,13.6,Below,2023-12-01,,
 E-01269,Engineering,Technical,L4,Male,25-34,Warsaw,E-01072,0.4,58500,3.8,Exceeds,2026-01-26,,Joined through the Marketing acquisition.
 E-01270,Engineering,Technical,L3,Female,25-34,Berlin,E-01106,4.1,59800,15.3,Outstanding,2022-09-03,2025-12-16,On parental leave for part of 2024.
 E-01271,Finance,Corporate,L5,Male,25-34,Podgorica,E-01055,1.4,65000,11.6,Meets,2025-02-14,,Relocated to Warsaw; package adjusted to local band.
-E-01272,Finance,Corporate,L3,Non-binary,35-44,Lisbon,E-01064,4.6,48200,4.2,Meets,2022-05-24,,Relocated to Berlin; package adjusted to local band.
+E-01272,Finance,Corporate,L3,Male,35-44,Lisbon,E-01064,4.6,48200,4.2,Meets,2022-05-24,,Relocated to Berlin; package adjusted to local band.
 E-01273,Engineering,Technical,L5,Female,55-64,Berlin,E-01098,5.7,96300,6.3,Meets,2021-09-24,,
 E-01274,Engineering,Technical,L1,Male,55-64,Lisbon,E-01074,4.2,36500,12.7,Meets,2022-10-22,,Grade corrected during the 2021 levelling exercise.
 E-01275,Engineering,Technical,L6,Male,35-44,Berlin,E-01049,0.1,146300,9.9,Meets,2026-12-14,,Grade corrected during the 2024 levelling exercise.
@@ -345,7 +345,7 @@ E-01342,Engineering,Technical,L3,Male,25-34,Berlin,E-01115,6.1,66500,13,Outstand
 E-01343,Marketing,Commercial,L4,Female,35-44,Lisbon,E-01058,5.1,62900,3.6,Exceeds,2021-01-14,2026-07-09,
 E-01344,Engineering,Technical,L4,Female,35-44,Remote (EU),E-01092,5.3,68500,15.6,Meets,2021-07-02,,Transferred from People in 2024.
 E-01345,Finance,Corporate,L3,Male,25-34,Berlin,E-01036,5.6,59800,4.6,Meets,2021-06-13,,
-E-01346,Engineering,Technical,L5,Non-binary,25-34,Podgorica,E-01024,0.3,60300,5.9,Meets,2026-05-03,2026-05-01,
+E-01346,Engineering,Technical,L5,Male,25-34,Podgorica,E-01024,0.3,60300,5.9,Meets,2026-05-03,2026-05-01,
 E-01347,Support,Operations,L7,Male,25-34,Remote (EU),E-01101,1.3,145700,5.6,Exceeds,2025-05-18,,Grade corrected during the 2024 levelling exercise.
 E-01348,Engineering,Technical,L6,Male,45-54,Remote (EU),E-01067,2,117300,17,Meets,2024-01-20,,
 E-01349,Marketing,Commercial,L7,Female,55-64,Berlin,E-01038,2.8,173400,13.7,Meets,2024-10-27,,
@@ -452,7 +452,7 @@ E-01449,Marketing,Commercial,L2,Female,55-64,Podgorica,E-01087,2,27700,16.1,Meet
 E-01450,Engineering,Technical,L3,Female,25-34,Podgorica,E-01071,0.8,42500,7.5,Meets,2026-03-14,,
 E-01451,Data,Technical,L1,Male,35-44,Remote (EU),E-01107,0.4,0,14.4,Meets,2026-03-21,,Relocated to Warsaw; package adjusted to local band.
 E-01452,People,Corporate,L4,Male,35-44,Berlin,E-01032,1.1,53700,6,Meets,2025-04-23,,Grade corrected during the 2024 levelling exercise.
-E-01453,Engineering,Technical,L6,Non-binary,25-34,Berlin,E-01116,2.7,115900,8.2,Meets,2024-07-05,2026-02-11,Joined through the Data acquisition.
+E-01453,Engineering,Technical,L6,Male,25-34,Berlin,E-01116,2.7,115900,8.2,Meets,2024-07-05,2026-02-11,Joined through the Data acquisition.
 E-01454,Legal,Corporate,L7,Female,45-54,Lisbon,E-01101,0.7,125700,19.7,Below,2026-01-12,,Relocated to Podgorica; package adjusted to local band.
 E-01455,Engineering,Technical,L3,Female,35-44,Berlin,E-01029,1.8,62300,15.3,Meets,2025-12-04,,Salary reviewed off-cycle after a competing offer.
 E-01456,Engineering,Technical,L7,Male,55-64,Berlin,E-01108,1.3,186700,19.6,Exceeds,2025-08-10,,Salary reviewed off-cycle after a competing offer.
@@ -603,7 +603,7 @@ E-01600,Sales,Commercial,L7,Male,25-34,Warsaw,E-01024,0.2,134600,17.8,Meets,2026
 E-01601,Finance,Corporate,L6,Male,18-24,Warsaw,E-01000,1.1,104800,3.7,Meets,2025-03-07,,
 E-01602,Marketing,Commercial,L5,Male,25-34,Lisbon,E-01020,0.5,74300,16.4,Meets,2026-03-11,2026-01-21,Transferred from People in 2025.
 E-01603,Engineering,Technical,L5,Male,35-44,Berlin,E-01032,1.5,104000,14.5,Meets,2025-04-28,,On parental leave for part of 2024.
-E-01604,Legal,Corporate,L4,Non-binary,45-54,Podgorica,E-01012,1.6,55700,10.5,Meets,2025-09-01,,On parental leave for part of 2025.
+E-01604,Legal,Corporate,L4,Male,45-54,Podgorica,E-01012,1.6,55700,10.5,Meets,2025-09-01,,On parental leave for part of 2025.
 E-01605,Sales,Commercial,L3,Male,35-44,Warsaw,E-01059,4,44600,14.2,Meets,2022-04-05,,
 E-01606,Engineering,Technical,L4,Male,35-44,Berlin,E-01009,4.8,83700,8.3,Meets,2022-08-19,,Grade corrected during the 2023 levelling exercise.
 E-01607,Sales,Commercial,L3,Male,25-34,Berlin,E-01114,0.4,63100,7.2,Exceeds,2026-10-25,,Grade corrected during the 2024 levelling exercise.
@@ -705,7 +705,7 @@ E-01702,Sales,Commercial,L6,Female,45-54,Berlin,E-01103,1.1,127300,7.7,Exceeds,2
 E-01703,Support,Operations,L5,Male,45-54,Lisbon,E-01085,2,77300,12.3,Meets,2024-04-03,,
 E-01704,Engineering,Technical,L3,Male,35-44,Berlin,E-01026,1.8,67800,19.3,Exceeds,2025-06-08,2025-11-01,Salary reviewed off-cycle after a competing offer.
 E-01705,Finance,Corporate,L4,Male,25-34,Lisbon,E-01034,5,68300,3.3,Meets,2021-07-22,,On parental leave for part of 2025.
-E-01706,Sales,Commercial,L3,Non-binary,25-34,Lisbon,E-01079,0.3,47900,15.4,Outstanding,2026-06-07,,Salary reviewed off-cycle after a competing offer.
+E-01706,Sales,Commercial,L3,Male,25-34,Lisbon,E-01079,0.3,47900,15.4,Outstanding,2026-06-07,,Salary reviewed off-cycle after a competing offer.
 E-01707,Sales,Commercial,L2,Male,18-24,Berlin,E-01070,0.7,49400,9.4,Meets,2026-04-24,,Joined through the Support acquisition.
 E-01708,Support,Operations,L6,Male,45-54,Remote (EU),E-01018,3.1,104200,16.6,Below,2023-06-05,,Salary reviewed off-cycle after a competing offer.
 E-01709,Sales,Commercial,L4,Female,25-34,Remote (EU),E-01101,4.3,70900,18.1,Exceeds,2022-07-20,,
@@ -741,7 +741,7 @@ E-01738,Legal,Corporate,L2,Female,35-44,Lisbon,E-01049,2.8,35800,15.9,Exceeds,20
 E-01739,Data,Technical,L4,Male,25-34,Remote (EU),E-01002,2,78800,3.2,Meets,2024-03-15,,Salary reviewed off-cycle after a competing offer.
 E-01740,Support,Operations,L3,Male,25-34,Berlin,E-01025,3.8,64800,16.8,Meets,2023-01-19,2026-02-13,
 E-01741,Engineering,Technical,L2,Male,45-54,Podgorica,E-01029,1.8,31500,18.3,Meets,2025-04-09,,Joined through the Finance acquisition.
-E-01742,Engineering,Technical,L1,Non-binary,35-44,Podgorica,E-01055,2.2,20400,19.1,Below,2024-11-08,,
+E-01742,Engineering,Technical,L1,Male,35-44,Podgorica,E-01055,2.2,20400,19.1,Below,2024-11-08,,
 E-01743,Engineering,Technical,L5,Male,45-54,Podgorica,E-01104,0.9,58900,18,Meets,2026-08-07,,On parental leave for part of 2022.
 E-01744,People,Corporate,L2,Male,45-54,Berlin,E-01088,6.4,49300,11.3,Exceeds,2020-10-28,,Transferred from Legal in 2023.
 E-01745,Support,Operations,L2,Female,45-54,Remote (EU),E-01089,2.1,44800,4.7,Below,2024-02-23,,Joined through the People acquisition.
@@ -755,7 +755,7 @@ E-01752,Sales,Commercial,L5,Female,35-44,Warsaw,E-01104,2.4,60400,18.2,Meets,202
 E-01753,Marketing,Commercial,L3,Female,18-24,Berlin,E-01061,6.6,61200,9.7,Below,2020-05-08,2026-04-22,Transferred from Legal in 2020.
 E-01754,Support,Operations,L3,Female,25-34,Remote (EU),E-01048,4.4,48000,19.4,Exceeds,2022-08-10,,On parental leave for part of 2021.
 E-01755,Engineering,Technical,L3,Male,18-24,Warsaw,E-01013,2.4,46300,4.4,Below,2024-05-22,,
-E-01756,Marketing,Commercial,L5,Non-binary,35-44,Lisbon,E-01070,1.6,67600,17.1,Exceeds,2025-12-18,,Completed the internal leadership programme.
+E-01756,Marketing,Commercial,L5,Male,35-44,Lisbon,E-01070,1.6,67600,17.1,Exceeds,2025-12-18,,Completed the internal leadership programme.
 E-01757,Finance,Corporate,L1,Female,45-54,Berlin,E-01000,0,37400,11,Meets,2026-09-12,,Salary reviewed off-cycle after a competing offer.
 E-01758,Sales,Commercial,L2,Male,35-44,Berlin,E-01050,2.5,46500,18.2,Exceeds,2024-06-19,2025-02-05,Transferred from People in 2025.
 E-01759,Engineering,Technical,L1,Male,45-54,Warsaw,E-01021,7.5,28100,8.3,Meets,2019-03-08,2026-01-06,Relocated to Remote (EU); package adjusted to local band.
@@ -1089,7 +1089,7 @@ E-02086,Engineering,Technical,L3,Male,25-34,Lisbon,E-01117,0,0,19.1,Meets,2026-0
 E-02087,Sales,Commercial,L4,Male,25-34,Warsaw,E-01092,0,53300,4,Outstanding,2026-11-11,,Salary reviewed off-cycle after a competing offer.
 E-02088,Legal,Corporate,L6,Male,25-34,Warsaw,E-01074,0.6,92700,9,Meets,2026-06-21,,Relocated to Warsaw; package adjusted to local band.
 E-02089,Marketing,Commercial,L5,Male,35-44,Podgorica,E-01091,7.3,65600,18.5,Exceeds,2019-04-22,,Salary reviewed off-cycle after a competing offer.
-E-02090,Engineering,Technical,L3,Non-binary,35-44,Podgorica,E-01105,1.7,34900,7.6,Outstanding,2025-11-04,,Completed the internal leadership programme.
+E-02090,Engineering,Technical,L3,Male,35-44,Podgorica,E-01105,1.7,34900,7.6,Outstanding,2025-11-04,,Completed the internal leadership programme.
 E-02091,Sales,Commercial,L6,Male,18-24,Berlin,E-01010,0.7,128300,19.3,Exceeds,2026-10-06,2025-11-07,
 E-02092,Sales,Commercial,L5,Female,25-34,Lisbon,E-01065,2.6,75100,4.6,Meets,2024-02-18,,
 E-02093,Finance,Corporate,L4,Male,35-44,Warsaw,E-01011,2.2,53300,8.5,Meets,2024-07-25,,On parental leave for part of 2025.
@@ -1229,7 +1229,7 @@ E-02226,Data,Technical,L5,Male,45-54,Remote (EU),E-01009,3.1,98300,4.8,Meets,202
 E-02227,Marketing,Commercial,L5,Female,25-34,Warsaw,E-01046,2.3,65200,8.2,Exceeds,2024-11-27,2026-09-11,Grade corrected during the 2021 levelling exercise.
 E-02228,Finance,Corporate,L4,Male,45-54,Remote (EU),E-01081,0.6,76100,9.3,Exceeds,2026-01-25,,
 E-02229,Engineering,Technical,L4,Male,45-54,Lisbon,E-01033,1.9,63700,12.4,Meets,2025-08-27,,Grade corrected during the 2023 levelling exercise.
-E-02230,Sales,Commercial,L3,Non-binary,45-54,Berlin,E-01103,0.3,65200,18.5,Below,2026-07-13,,On parental leave for part of 2022.
+E-02230,Sales,Commercial,L3,Male,45-54,Berlin,E-01103,0.3,65200,18.5,Below,2026-07-13,,On parental leave for part of 2022.
 E-02231,Support,Operations,L3,Male,25-34,Podgorica,E-01041,3.3,37000,4.8,Meets,2023-02-10,,Transferred from Data in 2022.
 E-02232,Marketing,Commercial,L2,Female,45-54,Warsaw,E-01051,0.7,32600,3.5,Below,2026-11-23,,
 E-02233,Data,Technical,L4,Male,35-44,Berlin,E-01094,0.6,75600,7,Meets,2026-04-15,,
@@ -1322,14 +1322,14 @@ E-02319,Marketing,Commercial,L4,Female,25-34,Berlin,E-01073,6.2,76500,17.8,Meets
 E-02320,Engineering,Technical,L4,Male,35-44,Lisbon,E-01017,0.3,64300,9.9,Exceeds,2026-02-20,,
 E-02321,Sales,Commercial,L3,Female,25-34,Remote (EU),E-01074,0.5,56600,7.9,Meets,2026-07-06,,
 E-02322,People,Corporate,L5,Female,45-54,Podgorica,E-01109,1.5,56500,19.3,Meets,2025-03-20,,
-E-02323,Sales,Commercial,L3,Non-binary,25-34,Podgorica,E-01097,3.4,44200,15.3,Exceeds,2023-08-22,,Transferred from Marketing in 2025.
+E-02323,Sales,Commercial,L3,Male,25-34,Podgorica,E-01097,3.4,44200,15.3,Exceeds,2023-08-22,,Transferred from Marketing in 2025.
 E-02324,Engineering,Technical,L2,Male,35-44,Lisbon,E-01047,2.2,37800,7.1,Meets,2024-12-05,2026-09-21,
 E-02325,Support,Operations,L5,Female,18-24,Berlin,E-01055,0.3,99400,5.9,Meets,2026-05-12,,
 E-02326,Data,Technical,L5,Male,25-34,Berlin,E-01060,6.3,0,16,Meets,2020-02-25,,
 E-02327,Engineering,Technical,L2,Male,35-44,Remote (EU),E-01089,1.9,44200,17,Outstanding,2025-08-19,,Salary reviewed off-cycle after a competing offer.
 E-02328,Engineering,Technical,L3,Female,25-34,Lisbon,E-01088,3,50100,18.6,Exceeds,2023-01-17,,Salary reviewed off-cycle after a competing offer.
 E-02329,Data,Technical,L6,Male,55-64,Remote (EU),E-01047,0.8,123600,3.5,Meets,2026-12-14,,Relocated to Berlin; package adjusted to local band.
-E-02330,Sales,Commercial,L3,Non-binary,25-34,Berlin,E-01024,0.3,64800,7.2,Exceeds,2026-08-20,,Completed the internal leadership programme.
+E-02330,Sales,Commercial,L3,Male,25-34,Berlin,E-01024,0.3,64800,7.2,Exceeds,2026-08-20,,Completed the internal leadership programme.
 E-02331,Sales,Commercial,L2,Female,35-44,Remote (EU),E-01103,0,42500,16.5,Meets,2026-02-23,,
 E-02332,Data,Technical,L2,Male,35-44,Remote (EU),E-01004,4.4,47500,7.4,Meets,2022-07-14,,
 E-02333,Finance,Corporate,L6,Female,25-34,Berlin,E-01073,0.7,123400,15.7,Exceeds,2026-02-25,,Grade corrected during the 2019 levelling exercise.
@@ -1355,7 +1355,7 @@ E-02352,Sales,Commercial,L3,Male,35-44,Remote (EU),E-01002,3.3,59500,15.9,Meets,
 E-02353,Engineering,Technical,L3,Male,45-54,Remote (EU),E-01012,0.5,51500,4.8,Outstanding,2026-09-07,,Salary reviewed off-cycle after a competing offer.
 E-02354,Engineering,Technical,L4,Male,35-44,Remote (EU),E-01069,2.5,77100,16.9,Meets,2024-10-03,,
 E-02355,Engineering,Technical,L5,Male,25-34,Berlin,E-01056,3.8,103700,19.2,Meets,2023-01-03,,On parental leave for part of 2021.
-E-02356,Engineering,Technical,L6,Non-binary,35-44,Remote (EU),E-01036,3,95400,6.3,Meets,2023-05-14,,Completed the internal leadership programme.
+E-02356,Engineering,Technical,L6,Male,35-44,Remote (EU),E-01036,3,95400,6.3,Meets,2023-05-14,,Completed the internal leadership programme.
 E-02357,Engineering,Technical,L4,Female,25-34,Berlin,E-01022,0.9,78200,7,Meets,2026-06-19,2026-06-09,Joined through the Data acquisition.
 E-02358,Sales,Commercial,L1,Female,25-34,Remote (EU),E-01089,1.6,30300,7.6,Below,2025-12-02,2025-09-19,
 E-02359,Engineering,Technical,L5,Male,55-64,Lisbon,E-01057,5.3,83700,4.4,Meets,2021-11-03,,
@@ -1387,7 +1387,7 @@ E-02384,Data,Technical,L5,Female,35-44,Berlin,E-01102,2,88500,11.7,Exceeds,2024-
 E-02385,Engineering,Technical,L3,Male,25-34,Berlin,E-01099,0.3,57600,5.8,Exceeds,2026-10-25,,Completed the internal leadership programme.
 E-02386,Engineering,Technical,L4,Male,35-44,Remote (EU),E-01055,1.4,63100,8,Meets,2025-04-24,,Joined through the Support acquisition.
 E-02387,Sales,Commercial,L3,Female,35-44,Remote (EU),E-01097,1.2,0,8.3,Meets,2025-02-27,,Joined through the Legal acquisition.
-E-02388,Marketing,Commercial,L4,Non-binary,25-34,Berlin,E-01001,2.5,81300,15.1,Meets,2024-08-01,2025-10-18,
+E-02388,Marketing,Commercial,L4,Male,25-34,Berlin,E-01001,2.5,81300,15.1,Meets,2024-08-01,2025-10-18,
 E-02389,Engineering,Technical,L3,Male,25-34,Lisbon,E-01026,3.7,44700,8.5,Exceeds,2023-10-06,,Grade corrected during the 2019 levelling exercise.
 E-02390,Marketing,Commercial,L4,Male,25-34,Warsaw,E-01106,0.1,57800,19.9,Meets,2026-06-17,,Grade corrected during the 2019 levelling exercise.
 E-02391,Finance,Corporate,L4,Male,35-44,Berlin,E-01072,6.8,84400,13.2,Exceeds,2020-01-07,,Completed the internal leadership programme.
@@ -1428,7 +1428,7 @@ E-02425,People,Corporate,L3,Female,35-44,Berlin,E-01064,0.8,66000,15.1,Meets,202
 E-02426,Finance,Corporate,L7,Male,35-44,Remote (EU),E-01016,4.9,160100,10.9,Exceeds,2022-08-08,,On parental leave for part of 2020.
 E-02427,Sales,Commercial,L4,Male,25-34,Remote (EU),E-01034,6.6,68900,18.3,Below,2020-02-12,2025-12-08,Relocated to Lisbon; package adjusted to local band.
 E-02428,Engineering,Technical,L2,Female,35-44,Berlin,E-01095,4.3,49900,18,Exceeds,2022-09-08,,
-E-02429,Finance,Corporate,L4,Non-binary,25-34,Podgorica,E-01076,4.2,49100,13,Outstanding,2022-03-07,,Salary reviewed off-cycle after a competing offer.
+E-02429,Finance,Corporate,L4,Male,25-34,Podgorica,E-01076,4.2,49100,13,Outstanding,2022-03-07,,Salary reviewed off-cycle after a competing offer.
 E-02430,Support,Operations,L4,Female,18-24,Berlin,E-01015,1.1,72400,6.8,Exceeds,2025-01-26,,Grade corrected during the 2021 levelling exercise.
 E-02431,People,Corporate,L2,Male,18-24,Warsaw,E-01032,6.9,38300,16.5,Exceeds,2020-02-11,,
 E-02432,Sales,Commercial,L3,Female,45-54,Podgorica,E-01012,4.1,40400,14.6,Meets,2022-02-15,,On parental leave for part of 2024.
@@ -1487,7 +1487,7 @@ E-02484,Engineering,Technical,L6,Male,45-54,Warsaw,E-01053,2.3,92300,7.3,Meets,2
 E-02485,Support,Operations,L5,Female,45-54,Lisbon,E-01025,2.8,78100,19.6,Meets,2024-11-03,,On parental leave for part of 2019.
 E-02486,Sales,Commercial,L7,Male,35-44,Berlin,E-01034,1.4,162400,14.3,Below,2025-04-26,2026-02-08,
 E-02487,Support,Operations,L4,Female,35-44,Berlin,E-01020,3.9,78700,17.6,Meets,2023-05-28,2025-01-17,Transferred from Legal in 2025.
-E-02488,Engineering,Technical,L4,Non-binary,25-34,Lisbon,E-01114,4.8,0,9.6,Meets,2022-01-27,,Joined through the Legal acquisition.
+E-02488,Engineering,Technical,L4,Male,25-34,Lisbon,E-01114,4.8,0,9.6,Meets,2022-01-27,,Joined through the Legal acquisition.
 E-02489,Engineering,Technical,L2,Female,45-54,Berlin,E-01056,2.3,45300,17.9,Meets,2024-11-14,,Salary reviewed off-cycle after a competing offer.
 E-02490,Engineering,Technical,L2,Male,45-54,Berlin,E-01001,4.4,53000,15.2,Exceeds,2022-11-12,,On parental leave for part of 2022.
 E-02491,Support,Operations,L4,Male,25-34,Remote (EU),E-01106,1.1,69200,9.2,Outstanding,2025-11-23,,Transferred from Data in 2024.
@@ -1607,7 +1607,7 @@ E-02604,Engineering,Technical,L3,Female,25-34,Lisbon,E-01016,0.2,41900,17.3,Meet
 E-02605,Engineering,Technical,L5,Male,35-44,Berlin,E-01025,5.3,97700,12,Meets,2021-10-08,2025-07-07,
 E-02606,Engineering,Technical,L2,Female,65+,Berlin,E-01063,0.8,44200,6.9,Meets,2026-09-21,,Grade corrected during the 2022 levelling exercise.
 E-02607,Engineering,Technical,L3,Female,25-34,Warsaw,E-01045,0.7,40500,13.6,Meets,2026-09-09,,
-E-02608,Engineering,Technical,L1,Non-binary,45-54,Podgorica,E-01053,2.9,25800,13.1,Meets,2024-11-20,,Grade corrected during the 2019 levelling exercise.
+E-02608,Engineering,Technical,L1,Male,45-54,Podgorica,E-01053,2.9,25800,13.1,Meets,2024-11-20,,Grade corrected during the 2019 levelling exercise.
 E-02609,Marketing,Commercial,L3,Male,45-54,Berlin,E-01001,3.4,50900,8.3,Meets,2023-08-05,,Completed the internal leadership programme.
 E-02610,Data,Technical,L4,Female,25-34,Warsaw,E-01039,1.3,56500,11.9,Meets,2025-02-17,,Joined through the Marketing acquisition.
 E-02611,Support,Operations,L1,Female,25-34,Berlin,E-01077,1.1,37700,16.3,Meets,2025-09-21,,Relocated to Warsaw; package adjusted to local band.
@@ -1634,7 +1634,7 @@ E-02631,Data,Technical,L4,Male,25-34,Berlin,E-01092,4.1,81000,17.8,Below,2022-09
 E-02632,People,Corporate,L2,Female,35-44,Podgorica,E-01015,1.8,27500,14.1,Exceeds,2025-01-19,,
 E-02633,Legal,Corporate,L3,Male,35-44,Berlin,E-01002,1.2,63300,17,Meets,2025-10-23,,Grade corrected during the 2020 levelling exercise.
 E-02634,Engineering,Technical,L2,Female,25-34,Remote (EU),E-01069,1.8,45000,8.7,Meets,2025-07-21,,
-E-02635,Engineering,Technical,L2,Non-binary,35-44,Berlin,E-01032,6,49900,17.9,Meets,2020-09-24,,
+E-02635,Engineering,Technical,L2,Male,35-44,Berlin,E-01032,6,49900,17.9,Meets,2020-09-24,,
 E-02636,Marketing,Commercial,L6,Male,45-54,Warsaw,E-01018,0.7,92200,19.6,Meets,2026-09-18,,Relocated to Berlin; package adjusted to local band.
 E-02637,Support,Operations,L1,Female,25-34,Podgorica,E-01008,5.2,21600,12.4,Meets,2021-07-07,,
 E-02638,Finance,Corporate,L4,Female,55-64,Podgorica,E-01063,3.5,46300,18.4,Meets,2023-12-24,,Completed the internal leadership programme.
@@ -2000,7 +2000,7 @@ E-02997,Finance,Corporate,L5,Female,35-44,Berlin,E-01022,3.1,90500,12,Outstandin
 E-02998,Engineering,Technical,L5,Male,25-34,Lisbon,E-01081,3.5,85400,7.3,Meets,2023-11-11,,Salary reviewed off-cycle after a competing offer.
 E-02999,Finance,Corporate,L3,Female,35-44,Warsaw,E-01080,2.1,41200,12.2,Meets,2024-11-18,,On parental leave for part of 2020.
 E-03000,Data,Technical,L2,Female,25-34,Berlin,E-01065,6.1,46700,6.9,Meets,2020-04-15,,
-E-03001,People,Corporate,L3,Non-binary,45-54,Podgorica,E-01029,2.8,35300,9.3,Meets,2024-01-10,,Transferred from Sales in 2024.
+E-03001,People,Corporate,L3,Male,45-54,Podgorica,E-01029,2.8,35300,9.3,Meets,2024-01-10,,Transferred from Sales in 2024.
 E-03002,Engineering,Technical,L3,Female,55-64,Lisbon,E-01045,0.5,44700,3.5,Meets,2026-01-09,,Relocated to Berlin; package adjusted to local band.
 E-03003,Engineering,Technical,L5,Female,35-44,Lisbon,E-01044,0.7,73800,16.5,Meets,2026-07-14,,Joined through the Legal acquisition.
 E-03004,Support,Operations,L2,Male,45-54,Berlin,E-01091,6.1,46800,6.8,Meets,2020-11-15,,
@@ -2124,7 +2124,7 @@ E-03121,Data,Technical,L2,Female,35-44,Podgorica,E-01086,3.4,25700,3.6,Exceeds,2
 E-03122,Engineering,Technical,L5,Male,25-34,Berlin,E-01016,0.9,105400,16,Meets,2026-08-13,,
 E-03123,Data,Technical,L2,Male,35-44,Remote (EU),E-01109,0.1,45700,16.9,Outstanding,2026-02-02,,Completed the internal leadership programme.
 E-03124,Support,Operations,L1,Male,35-44,Remote (EU),E-01026,0.6,35000,7.4,Meets,2026-08-13,,
-E-03125,People,Corporate,L4,Non-binary,25-34,Remote (EU),E-01068,5.6,70600,5,Meets,2021-03-18,,Joined through the People acquisition.
+E-03125,People,Corporate,L4,Male,25-34,Remote (EU),E-01068,5.6,70600,5,Meets,2021-03-18,,Joined through the People acquisition.
 E-03126,Engineering,Technical,L3,Male,35-44,Podgorica,E-01086,2.5,42500,11.5,Exceeds,2024-11-05,2026-08-12,Grade corrected during the 2022 levelling exercise.
 E-03127,Engineering,Technical,L1,Male,35-44,Remote (EU),E-01026,0.2,32600,17.4,Meets,2026-10-07,,Grade corrected during the 2025 levelling exercise.
 E-03128,Sales,Commercial,L4,Female,35-44,Berlin,E-01011,4.8,71600,13,Below,2022-01-11,,Relocated to Remote (EU); package adjusted to local band.
@@ -2210,7 +2210,7 @@ E-03207,Marketing,Commercial,L5,Male,18-24,Remote (EU),E-01099,0.1,74700,13.7,Me
 E-03208,Engineering,Technical,L3,Male,25-34,Podgorica,E-01030,3.3,36800,12.2,Meets,2023-05-25,,Salary reviewed off-cycle after a competing offer.
 E-03209,Sales,Commercial,L2,Male,25-34,Warsaw,E-01069,4.2,39000,4.6,Meets,2022-09-18,,Grade corrected during the 2025 levelling exercise.
 E-03210,Data,Technical,L4,Male,45-54,Berlin,E-01068,3.1,78700,6.6,Meets,2023-08-27,,Transferred from Engineering in 2025.
-E-03211,Engineering,Technical,L4,Non-binary,25-34,Berlin,E-01081,3.5,73500,8.1,Meets,2023-03-07,,
+E-03211,Engineering,Technical,L4,Male,25-34,Berlin,E-01081,3.5,73500,8.1,Meets,2023-03-07,,
 E-03212,Finance,Corporate,L2,Male,25-34,Lisbon,E-01063,5.6,42200,19.2,Exceeds,2021-04-17,,On parental leave for part of 2023.
 E-03213,Sales,Commercial,L6,Male,55-64,Berlin,E-01049,0.4,118800,15.6,Meets,2026-08-04,,
 E-03214,Engineering,Technical,L4,Female,45-54,Berlin,E-01058,0.4,71400,16.6,Meets,2026-11-13,2025-11-21,Completed the internal leadership programme.
@@ -2252,7 +2252,7 @@ E-03249,Sales,Commercial,L5,Male,18-24,Lisbon,E-01053,1.8,79100,16.2,Meets,2025-
 E-03250,Engineering,Technical,L2,Male,45-54,Remote (EU),E-01091,2.7,46000,12,Exceeds,2024-03-01,,
 E-03251,Sales,Commercial,L2,Male,45-54,Warsaw,E-01111,1.4,36200,6.3,Outstanding,2025-08-18,,On parental leave for part of 2025.
 E-03252,Legal,Corporate,L2,Male,45-54,Lisbon,E-01093,5.4,33300,16.1,Meets,2021-01-01,,On parental leave for part of 2020.
-E-03253,Support,Operations,L1,Non-binary,35-44,Remote (EU),E-01033,0.2,37000,16.5,Exceeds,2026-10-17,,Completed the internal leadership programme.
+E-03253,Support,Operations,L1,Male,35-44,Remote (EU),E-01033,0.2,37000,16.5,Exceeds,2026-10-17,,Completed the internal leadership programme.
 E-03254,Data,Technical,L6,Female,18-24,Berlin,E-01063,1.7,122500,8.6,Meets,2025-03-14,,
 E-03255,Support,Operations,L2,Female,35-44,Warsaw,E-01021,0.1,31600,18,Meets,2026-02-13,,On parental leave for part of 2021.
 E-03256,Data,Technical,L3,Male,25-34,Remote (EU),E-01073,1,51600,3.5,Exceeds,2025-05-22,,Relocated to Berlin; package adjusted to local band.
@@ -2275,7 +2275,7 @@ E-03272,Engineering,Technical,L3,Male,35-44,Lisbon,E-01068,0.4,50000,5.5,Exceeds
 E-03273,Legal,Corporate,L5,Male,35-44,Berlin,E-01081,1.7,106300,15.2,Meets,2025-04-11,,Completed the internal leadership programme.
 E-03274,Engineering,Technical,L5,Female,35-44,Remote (EU),E-01010,2.2,78200,3.2,Outstanding,2024-02-27,,Salary reviewed off-cycle after a competing offer.
 E-03275,Engineering,Technical,L3,Female,45-54,Berlin,E-01081,3,57500,4.3,Meets,2023-09-13,2025-05-10,Salary reviewed off-cycle after a competing offer.
-E-03276,Sales,Commercial,L4,Non-binary,55-64,Lisbon,E-01028,4.8,63000,19.9,Exceeds,2022-11-18,,
+E-03276,Sales,Commercial,L4,Male,55-64,Lisbon,E-01028,4.8,63000,19.9,Exceeds,2022-11-18,,
 E-03277,Engineering,Technical,L5,Male,45-54,Berlin,E-01072,0.4,88800,5.4,Meets,2026-05-28,,
 E-03278,People,Corporate,L7,Male,35-44,Berlin,E-01071,1.5,154700,14.4,Exceeds,2025-05-12,,
 E-03279,Engineering,Technical,L5,Male,45-54,Podgorica,E-01028,1.5,56800,18,Meets,2025-01-11,,Transferred from Finance in 2025.
@@ -2393,7 +2393,7 @@ E-03390,Marketing,Commercial,L5,Female,25-34,Warsaw,E-01025,0.5,71500,9.3,Outsta
 E-03391,Engineering,Technical,L4,Male,55-64,Berlin,E-01085,2.6,79000,8.4,Outstanding,2024-06-10,,
 E-03392,Support,Operations,L4,Male,35-44,Berlin,E-01028,1.1,78700,13,Meets,2025-03-27,,
 E-03393,Marketing,Commercial,L4,Female,45-54,Berlin,E-01033,4.2,75200,19.3,Meets,2022-01-05,,
-E-03394,Finance,Corporate,L1,Non-binary,55-64,Warsaw,E-01079,2.1,27900,6.9,Outstanding,2024-04-20,,Salary reviewed off-cycle after a competing offer.
+E-03394,Finance,Corporate,L1,Male,55-64,Warsaw,E-01079,2.1,27900,6.9,Outstanding,2024-04-20,,Salary reviewed off-cycle after a competing offer.
 E-03395,Engineering,Technical,L7,Female,25-34,Lisbon,E-01093,2.8,119700,17.7,Meets,2024-08-25,,On parental leave for part of 2020.
 E-03396,Engineering,Technical,L2,Male,35-44,Berlin,E-01014,2.7,48500,4.7,Meets,2024-05-24,2025-04-12,On parental leave for part of 2024.
 E-03397,Data,Technical,L1,Female,25-34,Lisbon,E-01034,2.2,29600,16.7,Exceeds,2024-11-28,,Grade corrected during the 2022 levelling exercise.
@@ -2684,7 +2684,7 @@ E-03681,Marketing,Commercial,L5,Male,55-64,Remote (EU),E-01025,2.7,72800,18.7,Ex
 E-03682,Marketing,Commercial,L2,Male,35-44,Berlin,E-01053,4.2,51200,16.3,Meets,2022-10-26,,Joined through the Marketing acquisition.
 E-03683,Support,Operations,L3,Male,65+,Warsaw,E-01070,3.9,46100,7.9,Meets,2023-10-23,,Relocated to Warsaw; package adjusted to local band.
 E-03684,Engineering,Technical,L4,Female,45-54,Berlin,E-01003,5.3,77000,14.9,Outstanding,2021-01-17,,Joined through the Finance acquisition.
-E-03685,Engineering,Technical,L1,Non-binary,35-44,Warsaw,E-01041,1.5,28900,11.5,Outstanding,2025-02-24,,
+E-03685,Engineering,Technical,L1,Male,35-44,Warsaw,E-01041,1.5,28900,11.5,Outstanding,2025-02-24,,
 E-03686,Legal,Corporate,L2,Male,45-54,Berlin,E-01014,0.9,49400,13.4,Meets,2026-11-13,,Relocated to Remote (EU); package adjusted to local band.
 E-03687,Data,Technical,L3,Male,45-54,Berlin,E-01067,5.6,60900,8.4,Exceeds,2021-06-06,,Completed the internal leadership programme.
 E-03688,Sales,Commercial,L5,Female,25-34,Remote (EU),E-01042,0.9,92300,12.1,Meets,2026-11-24,,Salary reviewed off-cycle after a competing offer.
@@ -2936,7 +2936,7 @@ E-03933,Engineering,Technical,L5,Female,35-44,Berlin,E-01119,2.4,88200,12.1,Exce
 E-03934,Engineering,Technical,L5,Male,35-44,Berlin,E-01035,5.9,96600,16.4,Meets,2021-01-01,,Transferred from Sales in 2025.
 E-03935,Support,Operations,L3,Female,25-34,Berlin,E-01030,1.5,53300,9.2,Meets,2025-06-01,,Grade corrected during the 2023 levelling exercise.
 E-03936,Sales,Commercial,L2,Female,35-44,Warsaw,E-01020,4.2,34300,16.9,Meets,2022-07-20,,Transferred from Legal in 2021.
-E-03937,Engineering,Technical,L6,Non-binary,25-34,Warsaw,E-01029,0.3,90800,15.1,Meets,2026-05-04,,
+E-03937,Engineering,Technical,L6,Male,25-34,Warsaw,E-01029,0.3,90800,15.1,Meets,2026-05-04,,
 E-03938,Data,Technical,L2,Male,25-34,Podgorica,E-01074,0.5,29600,20,Below,2026-08-13,,Completed the internal leadership programme.
 E-03939,Engineering,Technical,L4,Female,45-54,Podgorica,E-01002,2.9,45400,4.9,Meets,2024-03-11,,Completed the internal leadership programme.
 E-03940,Support,Operations,L3,Male,35-44,Berlin,E-01012,1.9,68300,12.8,Meets,2025-12-20,2025-07-21,
@@ -3138,7 +3138,7 @@ E-04135,Support,Operations,L4,Male,35-44,Warsaw,E-01105,0.9,59800,6.9,Meets,2026
 E-04136,Engineering,Technical,L2,Female,35-44,Berlin,E-01007,2,0,8.1,Meets,2024-03-07,,Completed the internal leadership programme.
 E-04137,Engineering,Technical,L5,Female,45-54,Lisbon,E-01079,4,73300,18.2,Meets,2022-04-19,,Joined through the Legal acquisition.
 E-04138,Finance,Corporate,L3,Male,25-34,Remote (EU),E-01072,3.5,62000,8.9,Exceeds,2023-07-06,,Joined through the Finance acquisition.
-E-04139,Sales,Commercial,L4,Non-binary,25-34,Berlin,E-01113,1.2,84900,6.7,Meets,2025-09-12,,
+E-04139,Sales,Commercial,L4,Male,25-34,Berlin,E-01113,1.2,84900,6.7,Meets,2025-09-12,,
 E-04140,Sales,Commercial,L1,Male,35-44,Podgorica,E-01027,1.4,23600,16.5,Meets,2025-05-12,,
 E-04141,People,Corporate,L1,Female,25-34,Remote (EU),E-01038,4.4,30900,17.3,Meets,2022-05-10,,Grade corrected during the 2024 levelling exercise.
 E-04142,Marketing,Commercial,L4,Male,45-54,Remote (EU),E-01029,0.7,64900,18.3,Meets,2026-01-24,,Relocated to Remote (EU); package adjusted to local band.
@@ -3176,7 +3176,7 @@ E-04173,Support,Operations,L3,Female,35-44,Berlin,E-01045,1.9,60500,12.4,Below,2
 E-04174,Engineering,Technical,L2,Male,35-44,Lisbon,E-01078,4,40500,3.7,Meets,2022-04-22,2026-03-20,
 E-04175,Support,Operations,L2,Male,25-34,Berlin,E-01117,5.7,49800,15.5,Exceeds,2021-02-01,,Completed the internal leadership programme.
 E-04176,Sales,Commercial,L1,Male,35-44,Remote (EU),E-01094,7.3,33700,12.5,Meets,2019-07-13,,On parental leave for part of 2022.
-E-04177,Engineering,Technical,L2,Non-binary,35-44,Lisbon,E-01046,0.1,35100,11.2,Meets,2026-04-08,,
+E-04177,Engineering,Technical,L2,Male,35-44,Lisbon,E-01046,0.1,35100,11.2,Meets,2026-04-08,,
 E-04178,Sales,Commercial,L4,Male,25-34,Remote (EU),E-01045,2.8,76000,14.6,Exceeds,2024-01-08,,Grade corrected during the 2023 levelling exercise.
 E-04179,Engineering,Technical,L1,Male,25-34,Remote (EU),E-01063,3,34000,12.6,Meets,2023-06-27,,Salary reviewed off-cycle after a competing offer.
 E-04180,Sales,Commercial,L4,Male,25-34,Lisbon,E-01082,0.8,58100,15.4,Meets,2026-03-22,2026-12-21,
@@ -3336,7 +3336,7 @@ E-04333,Sales,Commercial,L3,Male,25-34,Podgorica,E-01076,1.4,43000,7.2,Meets,202
 E-04334,Engineering,Technical,L2,Male,35-44,Berlin,E-01061,2.2,53100,17.2,Meets,2024-12-02,,Joined through the Sales acquisition.
 E-04335,Engineering,Technical,L5,Male,35-44,Warsaw,E-01060,3.3,68300,8,Meets,2023-03-28,,Relocated to Berlin; package adjusted to local band.
 E-04336,Engineering,Technical,L2,Male,45-54,Remote (EU),E-01010,4.3,44200,11.3,Meets,2022-02-27,,Grade corrected during the 2020 levelling exercise.
-E-04337,People,Corporate,L2,Non-binary,35-44,Berlin,E-01044,3.2,51700,6.2,Exceeds,2023-06-04,,Salary reviewed off-cycle after a competing offer.
+E-04337,People,Corporate,L2,Male,35-44,Berlin,E-01044,3.2,51700,6.2,Exceeds,2023-06-04,,Salary reviewed off-cycle after a competing offer.
 E-04338,Engineering,Technical,L4,Female,35-44,Berlin,E-01008,0.1,70300,11,Meets,2026-07-25,,Transferred from Engineering in 2020.
 E-04339,Engineering,Technical,L1,Male,45-54,Remote (EU),E-01061,3.3,34600,6.7,Exceeds,2023-01-28,,Grade corrected during the 2024 levelling exercise.
 E-04340,Marketing,Commercial,L3,Male,25-34,Remote (EU),E-01061,8.2,65900,15.3,Meets,2018-06-08,,Completed the internal leadership programme.
@@ -3483,7 +3483,7 @@ E-04480,Engineering,Technical,L3,Female,45-54,Lisbon,E-01036,3.6,44800,18.7,Exce
 E-04481,Finance,Corporate,L4,Male,35-44,Remote (EU),E-01021,7,78500,18.1,Meets,2019-12-09,,Relocated to Warsaw; package adjusted to local band.
 E-04482,Marketing,Commercial,L1,Female,35-44,Remote (EU),E-01082,4.9,31700,9.1,Meets,2022-05-08,,Completed the internal leadership programme.
 E-04483,Marketing,Commercial,L2,Male,25-34,Berlin,E-01087,1.8,45800,4.4,Meets,2025-08-27,,
-E-04484,Sales,Commercial,L2,Non-binary,55-64,Berlin,E-01069,0.4,48100,6.7,Meets,2026-11-09,,Transferred from Legal in 2024.
+E-04484,Sales,Commercial,L2,Male,55-64,Berlin,E-01069,0.4,48100,6.7,Meets,2026-11-09,,Transferred from Legal in 2024.
 E-04485,Support,Operations,L4,Male,25-34,Berlin,E-01077,1,73100,14,Exceeds,2025-04-16,,Completed the internal leadership programme.
 E-04486,Legal,Corporate,L1,Male,25-34,Warsaw,E-01042,0.6,30400,10.2,Meets,2026-08-16,2025-10-21,Completed the internal leadership programme.
 E-04487,People,Corporate,L4,Male,25-34,Berlin,E-01041,1.1,72900,7.6,Below,2025-06-02,,On parental leave for part of 2025.
@@ -3603,7 +3603,7 @@ E-04600,Finance,Corporate,L3,Male,55-64,Berlin,E-01038,5.6,66900,13.7,Meets,2021
 E-04601,People,Corporate,L2,Female,25-34,Remote (EU),E-01079,0.5,36400,11.5,Meets,2026-05-26,,Transferred from Support in 2019.
 E-04602,Marketing,Commercial,L3,Female,45-54,Berlin,E-01032,0.4,57700,9.8,Meets,2026-07-25,2025-02-07,Completed the internal leadership programme.
 E-04603,Support,Operations,L5,Male,45-54,Berlin,E-01090,5.5,107900,4.3,Meets,2021-02-09,,
-E-04604,Finance,Corporate,L5,Non-binary,35-44,Remote (EU),E-01054,2.2,92400,4.7,Meets,2024-12-05,,Relocated to Berlin; package adjusted to local band.
+E-04604,Finance,Corporate,L5,Male,35-44,Remote (EU),E-01054,2.2,92400,4.7,Meets,2024-12-05,,Relocated to Berlin; package adjusted to local band.
 E-04605,People,Corporate,L4,Female,35-44,Remote (EU),E-01068,5.3,68400,9.7,Exceeds,2021-01-06,,Relocated to Berlin; package adjusted to local band.
 E-04606,Data,Technical,L1,Male,35-44,Berlin,E-01053,6.3,37500,19.9,Outstanding,2020-04-25,,Relocated to Remote (EU); package adjusted to local band.
 E-04607,Engineering,Technical,L5,Female,25-34,Warsaw,E-01037,9.8,68400,5.9,Exceeds,2017-01-24,,Relocated to Remote (EU); package adjusted to local band.
@@ -3682,7 +3682,7 @@ E-04679,Marketing,Commercial,L4,Female,45-54,Lisbon,E-01023,5.1,59100,11.4,Excee
 E-04680,Sales,Commercial,L3,Male,55-64,Berlin,E-01088,2.7,61700,16.1,Meets,2024-06-06,2025-06-22,Grade corrected during the 2025 levelling exercise.
 E-04681,Support,Operations,L5,Female,25-34,Lisbon,E-01075,1.1,71400,16.7,Meets,2025-05-16,,
 E-04682,Engineering,Technical,L4,Female,45-54,Remote (EU),E-01113,5.1,68900,3.1,Meets,2021-08-25,,
-E-04683,Finance,Corporate,L2,Non-binary,35-44,Lisbon,E-01069,0.3,34800,4,Meets,2026-08-01,,Joined through the Finance acquisition.
+E-04683,Finance,Corporate,L2,Male,35-44,Lisbon,E-01069,0.3,34800,4,Meets,2026-08-01,,Joined through the Finance acquisition.
 E-04684,Legal,Corporate,L1,Female,35-44,Remote (EU),E-01023,1.3,32100,10.2,Exceeds,2025-01-26,,Relocated to Lisbon; package adjusted to local band.
 E-04685,Engineering,Technical,L3,Female,35-44,Warsaw,E-01032,2.5,39800,4.7,Meets,2024-09-15,,On parental leave for part of 2025.
 E-04686,Engineering,Technical,L1,Male,45-54,Podgorica,E-01078,3.4,23400,11.2,Meets,2023-02-24,,Grade corrected during the 2020 levelling exercise.
