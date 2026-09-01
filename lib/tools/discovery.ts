@@ -3,6 +3,7 @@ import { z } from "zod";
 import { loadCsvFromUrl } from "@/lib/duckdb/loader";
 import { fail, ok } from "@/lib/tools/result";
 import { datasets, useDatasetStore } from "@/lib/store/datasets";
+import { notebook } from "@/lib/store/notebook";
 import { policy } from "@/lib/store/policy";
 import type { AirlockTool, AnyAirlockTool } from "@/lib/webmcp/types";
 
@@ -40,6 +41,16 @@ const getWorkspaceState: AirlockTool<Record<string, never>> = {
           name: d.name,
           row_count: d.rowCount,
           column_count: d.columns.length,
+        })),
+        blocks: notebook().blocks.map((block) => ({
+          id: block.id,
+          type: block.payload.type,
+          title:
+            block.payload.type === "finding"
+              ? block.payload.title
+              : block.payload.type === "chart"
+                ? block.payload.title
+                : block.payload.title,
         })),
         policy: {
           raw_row_requests_enabled: rawRequestsEnabled,
