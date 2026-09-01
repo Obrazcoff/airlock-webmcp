@@ -253,7 +253,7 @@ export function Workspace() {
               {" · "}
               <span className="font-mono text-neutral-400">{AIRLOCK_TOOLS.length}</span> total
             </p>
-            <ul className="mt-2 max-h-56 space-y-1 overflow-y-auto">
+            <ul className="mt-2 space-y-0.5">
               {toolsByTierOrder.map((tool) => {
                 const live = liveToolNames.has(tool.name);
                 return (
