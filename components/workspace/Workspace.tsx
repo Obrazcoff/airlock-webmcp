@@ -14,7 +14,7 @@ import { useDatasetStore } from "@/lib/store/datasets";
 import { useNotebookStore } from "@/lib/store/notebook";
 import { usePolicyStore } from "@/lib/store/policy";
 import { useReleaseStore } from "@/lib/store/release";
-import { AIRLOCK_TOOLS } from "@/lib/webmcp/registry";
+import { AIRLOCK_TOOLS, toolsForTiers } from "@/lib/webmcp/registry";
 import { useWebMcpTools } from "@/lib/webmcp/useWebMcpTools";
 import { CLASSIFICATION_LABELS } from "@/lib/privacy/types";
 import type { Tier } from "@/lib/webmcp/types";
@@ -41,7 +41,21 @@ export function Workspace() {
     return tiers;
   }, [datasets.length, rawRequestsEnabled]);
 
-  const { status, registered } = useWebMcpTools(activeTiers);
+  const tierKey = useMemo(() => [...activeTiers].sort().join(","), [activeTiers]);
+
+  const liveToolNames = useMemo(() => {
+    const tiers = new Set(
+      tierKey.length > 0 ? tierKey.split(",").map((tier) => Number(tier) as Tier) : [],
+    );
+    return new Set(toolsForTiers(tiers).map((tool) => tool.name));
+  }, [tierKey]);
+
+  const toolsByTierOrder = useMemo(
+    () => [...AIRLOCK_TOOLS].sort((a, b) => a.tier - b.tier || a.name.localeCompare(b.name)),
+    [],
+  );
+
+  const { status } = useWebMcpTools(activeTiers);
 
   const runDemo = async () => {
     setDemoRunning(true);
@@ -114,7 +128,7 @@ export function Workspace() {
                 <span className="ml-2 font-mono text-lg text-white">{cellsReleased}</span>
                 <span className="ml-1 text-neutral-500">cells</span>
               </div>
-              <WebMcpStatusPill status={status} toolCount={registered.length} />
+              <WebMcpStatusPill status={status} toolCount={liveToolNames.size} />
             </div>
           </div>
         </div>
@@ -234,16 +248,29 @@ export function Workspace() {
 
           <section className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-4">
             <h2 className="text-sm font-medium text-neutral-300">Tools live</h2>
-            <p className="mt-1 text-xs text-neutral-500">{registered.length} registered</p>
-            <ul className="mt-2 max-h-48 space-y-1 overflow-y-auto">
-              {AIRLOCK_TOOLS.map((tool) => {
-                const active = registered.includes(tool.name);
+            <p className="mt-1 text-xs text-neutral-500">
+              <span className="font-mono text-emerald-300">{liveToolNames.size}</span> registered
+              {" · "}
+              <span className="font-mono text-neutral-400">{AIRLOCK_TOOLS.length}</span> total
+            </p>
+            <ul className="mt-2 max-h-56 space-y-1 overflow-y-auto">
+              {toolsByTierOrder.map((tool) => {
+                const live = liveToolNames.has(tool.name);
                 return (
-                  <li key={tool.name} className="flex items-center gap-1.5 text-xs">
+                  <li key={tool.name} className="flex items-center gap-2 text-xs">
                     <span
-                      className={`h-1 w-1 rounded-full ${active ? "bg-emerald-400" : "bg-neutral-700"}`}
+                      className={`h-2 w-2 shrink-0 rounded-full ${
+                        live ? "bg-emerald-400 shadow-[0_0_6px_rgba(52,211,153,0.5)]" : "bg-rose-500"
+                      }`}
+                      title={live ? "Registered for the agent" : "Not registered"}
                     />
-                    <span className={active ? "text-neutral-300" : "text-neutral-600"}>
+                    <span
+                      className={
+                        live
+                          ? "font-mono text-neutral-200"
+                          : "font-mono text-neutral-500 line-through decoration-rose-500/70"
+                      }
+                    >
                       {tool.name}
                     </span>
                   </li>
