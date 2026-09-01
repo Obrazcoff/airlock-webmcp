@@ -3,14 +3,22 @@
 **An analytics workspace where an AI agent does the whole analysis without ever seeing
 your data.**
 
-Live demo: _pending deployment_ · Built for [The WebMCP Challenge](https://webmcp.devpost.com/)
+**Live demo:** https://airlock-webmcp.vercel.app  
+**Devpost:** https://devpost.com/software/airlock-3anf0i  
+Built for [The WebMCP Challenge](https://webmcp.devpost.com/)
 
 ---
 
-> **Status: documentation phase.** The specification in `docs/` is complete and the build
-> follows it. This README will carry the live URL, screenshots and the finished tool table
-> once the application is deployed. Everything below describes what is being built and
-> why.
+## 60-second demo
+
+1. Open the [live URL](https://airlock-webmcp.vercel.app).
+2. Click **▶ Watch the pay gap story**. Charts and findings appear in the shared notebook.
+   The header counter stays at **0 cells released**.
+3. Click **Try the airlock**. Approve or deny the release dialog.
+4. Uncheck **Allow raw row requests** in Privacy policy. `request_raw_rows` is crossed out
+   in Tools live (13 registered · 14 total).
+
+No login, no upload, no backend.
 
 ---
 
@@ -28,7 +36,7 @@ one.
 
 Give the agent the capability and withhold the data.
 
-Your file loads into DuckDB inside the browser tab and stays there. The agent gets sixteen
+Your file loads into DuckDB inside the browser tab and stays there. The agent gets fourteen
 WebMCP tools: schema inspection, column profiling, guarded SQL, chart authoring, findings.
 Those tools return statistics and aggregates. **They cannot return a row.** When the agent
 genuinely needs individual records it has to ask, in writing, and you see the exact values
@@ -87,12 +95,15 @@ for (const tool of toolsForActiveTiers) {
 return () => controller.abort(); // deregisters the whole tier atomically
 ```
 
-| Tier | Registered while | Contents |
+| Tier | Registered while | Tools |
 |---|---|---|
-| 0 | The page is open | Orientation: workspace state, dataset list, live selection, sample loader |
-| 1 | A dataset is loaded | Inspection: describe, profile, guarded query, explain |
-| 2 | A dataset is loaded | Authoring: views, charts, findings, block editing, export |
-| 3 | The policy permits it | The airlock: `request_raw_rows` |
+| 0 | The page is open | 4 — orientation: workspace state, dataset list, live selection, sample loader |
+| 1 | A dataset is loaded | 5 — inspection: describe, profile, guarded query, explain, policy suggestions |
+| 2 | A dataset is loaded | 4 — authoring: charts, findings, block edit/remove |
+| 3 | The policy permits it | 1 — the airlock: `request_raw_rows` |
+
+**14 tools total.** A fresh page advertises 4; loading a dataset takes it to 14; turning off
+raw requests takes it to 13.
 
 Input schemas are generated from Zod, so the JSON Schema the agent is shown and the
 validation the handler enforces are the same object. The browser does not validate
@@ -141,12 +152,12 @@ Full detail, including the threat model and its residual risks, in
 
 ## Verify the claim in one minute
 
-1. Open DevTools → Network. Load the sample payroll. **No request carries the data** — the
-   only traffic is the static bundle and the wasm binaries.
-2. Ask the agent for raw rows. Watch `run_query` fail with `too_many_rows`.
-3. Turn off raw requests in the policy editor. Watch `request_raw_rows` disappear from the
-   registered-tools panel.
-4. Finish the pay-gap analysis. The airlock meter still reads 0.
+1. Open DevTools → Network. Click **Watch the pay gap story**. **No request carries the
+   data** — only static assets and DuckDB wasm.
+2. In Tool audit, find the failed `run_query` (`too_many_rows`) after the story runs.
+3. Uncheck **Allow raw row requests**. `request_raw_rows` shows a red dot and strikethrough
+   in Tools live.
+4. After the pay-gap story alone, the airlock meter still reads **0**.
 
 ## Running it
 
@@ -180,7 +191,7 @@ than committed. They are large binaries; the script is the source of truth.
 
 ## Stack
 
-Next.js 15 with `output: 'export'` — no server code, no API routes, no environment
+Next.js 16 with `output: 'export'` — no server code, no API routes, no environment
 variables. DuckDB-Wasm (single-threaded `eh` bundle, self-hosted) for the engine.
 Observable Plot for charts. Zustand for state. Zod for schemas and validation. TypeScript
 throughout.
